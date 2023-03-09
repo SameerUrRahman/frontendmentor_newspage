@@ -1,0 +1,242 @@
+/* header */
+.primary-header
+{
+    align-items: center;
+    justify-content: space-between;
+    /* margin-inline: 5rem; */
+    padding-bottom: 1em;
+}
+.primary-navigation{
+    list-style: none;
+    padding: 0;
+    flex-direction: row;
+    /* margin: .5em; */
+    /* inset: 0 0 0 0; */
+    /* background: blue; */
+    transform: translate(0%);
+}
+.primary-navigation li{
+    display: inline-block;
+
+}
+.primary-navigation a{
+    text-decoration: none;
+    color: hsl(240, 100%, 5%);
+    /* color: hsl(36, 100%, 99%); */
+    margin-inline-end: 1.25em;
+}
+.primary-navigation a:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+.mobile-nav-toggle{
+    display: none;
+}
+.Last{
+    margin-inline-end: 0;
+}
+
+
+.logo
+{
+    margin: rem;
+}
+
+
+.flex
+{
+    display: flex;
+    gap: var(--gap,1rem);
+}
+/* header */
+@media (max-width:35em){
+    
+    .primary-navigation{
+        position: fixed;
+        list-style: none;
+        background-color: hsl(36, 100%, 99%);
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: 7rem 0  0 2em;
+        font-weight: 500;
+        z-index: 1000;
+        transform: translate(100%);
+        transition: transform 350ms ease-out;
+    }
+    .primary-navigation[data-visible="true"]{
+        transform: translate(0%);
+        
+    }
+    .primary-navigation a{
+        text-decoration: none;
+        color: hsl(240, 100%, 5%);
+    
+        
+    }
+    
+    .mobile-nav-toggle{
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        width: 2rem;
+        border: 0;
+        background-image:url(/assets/images/icon-menu.svg);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-color: hsl(36, 100%, 99%);
+        /* background-color: antiquewhite; */
+        aspect-ratio: 1;
+        z-index: 9999;
+    }
+    .mobile-nav-toggle[aria-expanded="true"]
+    {
+    background-image: url(assets/images/icon-menu-close.svg);
+
+
+    }
+}
+.big-pic{
+    max-width: 100%;
+    /* grid-column : span 2; */
+}
+
+@media (min-width:35em)
+{
+    .sec1-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    
+    }
+    .big-pic{
+        max-width: 100%;
+        /* grid-column : span 2; */
+    }
+    .item-3 button{
+        width: 50%;
+        height: 3rem;
+        background-color: hsl(5, 85%, 63%);
+        color: white;
+        padding: 0;
+        margin: 0;
+        border-color: hsl(5, 85%, 63%) ;
+    }
+    
+    .item-1{
+        grid-column: span 2;
+    }
+    
+    
+    
+    .item-4{
+        padding: 1rem;
+        background-color: hsl(240, 100%, 5%);
+        /* background-color: red; */
+        grid-column: 3;
+        /* grid-row: span 2; */
+        grid-row:1/ span 2;
+        display: grid;
+        
+    }
+}
+.item-4 h4{
+    color: hsl(36, 100%, 99%);
+
+}
+.item-3 button{
+    width: 50%;
+    height: 3rem;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    border-color: hsl(5, 85%, 63%) ;
+}
+.item-3 button:hover{
+        background-color: hsl(240, 100%, 5%);
+        border-color: hsl(240, 100%, 5%);
+
+}
+.item-4{
+    background-color: hsl(240, 100%, 5%);
+
+}
+.item-4 .card{
+    background-color: hsl(240, 100%, 5%);
+    border-bottom: 0.2rem solid hsl(233, 8%, 79%) ;
+    margin-bottom: 1rem;
+
+
+}
+.card article{
+    color: hsl(233, 8%, 79%);
+    /* border-style: solid; */
+}
+
+.secondary-header h6{
+    color: hsl(35, 77%, 62%);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* Typography */
+@font-face {
+    font-family: given-fonts;
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+body{
+    font-family: given-fonts,sans-serif;
+    overflow-x:hidden;
+    padding: 3rem; 
+}
+
+/* sec2  */
+@media (min-width:35rem){
+.sec2
+{
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(3,1fr);
+}
+.news img{
+    max-width: 10vw;
+}
+.card-grid{
+    display: grid;
+    grid-template-columns:10vw 1fr ;
+    gap: 2rem;
+}
+.number{
+    margin-top: 0;
+    color: hsl(233, 8%, 79%);
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+.small-title{
+    font-weight: 800;
+}
+}
+
+.number{
+    margin-top: 0;
+    color: hsl(233, 8%, 79%);
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+.small-title{
+    font-weight: 800;
+}
+
+@media (max-width:35em)
+{
+    .card-grid{
+        display: grid;
+        grid-template-columns:25vw 1fr ;
+        gap: 2rem;
+    }
+    .news img{
+        max-width: 25vw;
+    }
+}
