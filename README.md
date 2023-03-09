@@ -80,7 +80,7 @@ the use of relative units
 ## Author
 
 - Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@SameerUrRahman](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@SameerUrRahman](https://www.frontendmentor.io/profile/SameerUrRahman)
 
 *
 
